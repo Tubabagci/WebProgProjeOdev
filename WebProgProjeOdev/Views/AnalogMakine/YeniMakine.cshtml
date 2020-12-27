@@ -1,0 +1,14 @@
+﻿@model WebProgProjeOdev.Models.AnalogMakine
+@{
+    ViewData["Title"] = "YeniMakine";
+    Layout = "~/Views/Shared/_BenimLayout.cshtml";
+}
+<br/>
+<form class="form-group" method="post"> 
+   <b>Makine Adı</b>
+    @Html.TextBoxFor(a => a.MakineAd,new {@class="form-control"})
+
+    <br/>
+    <button class="btn btn-info">Yeni Makine Ekle</button>
+</form>
+

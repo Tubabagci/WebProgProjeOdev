@@ -1,0 +1,38 @@
+﻿@using WebProgProjeOdev.Models
+@model List<AnalogFotograf>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_BenimLayout.cshtml";
+}
+
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Fotograf Adı</th>
+        <th>Fotograf Konum</th>
+
+        <th>Sil</th>
+        <th>Güncelle</th>
+
+    </tr>
+    @foreach (var a in Model)
+    {
+<tr>
+    <td>@a.AnalogFotografID</td>
+    <td>@a.FotografAd</td>
+    <td>@a.FotografKonum</td>
+    <!--<td></td>-->
+    <td><a href="/AnalogMakine/MakineSil/@a.AnalogFotografID" class="btn btn-danger">Sil</a></td>
+    <td><a href="/AnalogMakine/MakineGetir/@a.AnalogFotografID" class="btn btn-success">Güncelle</a></td>
+
+
+</tr>
+    }
+
+</table>
+<a href="/AnalogFotograf/YeniAnalogFotograf/" class="btn btn-primary">Yeni Analog Fotograf</a>
+
+

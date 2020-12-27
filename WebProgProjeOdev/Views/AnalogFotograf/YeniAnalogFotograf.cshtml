@@ -1,0 +1,25 @@
+﻿@model WebProgProjeOdev.Models.AnalogFotograf
+
+@{
+    ViewData["Title"] = "YeniAnalogFotograf";
+    Layout = "~/Views/Shared/_BenimLayout.cshtml";
+}
+
+@using (Html.BeginForm("YeniAnalogFotograf", "AnalogFotograf", FormMethod.Post))
+{
+    <b>Fotoğraf ID</b>
+    @Html.TextBoxFor(a => a.AnalogFotografID, new { @class = "form-control" })
+
+    <br />
+
+    <b>Fotoğraf Adı</b>
+    @Html.TextBoxFor(a => a.FotografAd, new { @class = "form-control" })
+
+    <br />
+    @*<b>Analog Makine</b>
+    @Html.DropDownListFor(a => a.analogMakine.MakineAd, (List<SelectListItem>)ViewBag.aaa, new { @class = "form-control" })*@
+
+    <br />
+    <button class="btn btn-info">Fotograf Ekle</button>
+}
+
